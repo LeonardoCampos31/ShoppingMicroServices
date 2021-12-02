@@ -13,7 +13,7 @@ namespace Shopping.Services.ProductAPI.Controllers
         public ProductAPIController(IProductRepsotory productRepsotory)
         {
             _productRepsotory = productRepsotory;
-            this._response = new ResponseDto();
+            _response = new ResponseDto();
         }
 
         [HttpGet]

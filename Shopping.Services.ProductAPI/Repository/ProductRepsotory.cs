@@ -72,5 +72,12 @@ namespace Shopping.Services.ProductAPI.Repository
 
             return _mapper.Map<List<ProductDto>>(products);
         }
+
+        public async Task<ProductDto> GetProductByName(string name)
+        {
+            Product product = await _db.Products.FirstOrDefaultAsync(x => x.Name == name);
+
+            return _mapper.Map<ProductDto>(product);
+        }
     }
 }

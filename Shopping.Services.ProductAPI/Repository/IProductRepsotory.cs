@@ -8,5 +8,6 @@ namespace Shopping.Services.ProductAPI.Repository
         Task<ProductDto> GetProductById(int productId);
         Task<ProductDto> CreateUpateProduct(ProductDto productDto);
         Task<bool> DeleteProduct(int productId);
+        Task<ProductDto> GetProductByName(string name);
     }
 }
